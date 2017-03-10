@@ -14,12 +14,12 @@ namespace Software_Game
 
         private void update()
         {
-            
+
         }
 
         private void draw(Graphics g)
         {
-            
+
         }
     }
 }

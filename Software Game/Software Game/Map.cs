@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Software_Game
 {
-    public class Map
+    class Map
     {
         //properties
         public Size MapSize { get; private set; }
@@ -16,7 +16,7 @@ namespace Software_Game
         public Point GoalPosition { get; private set; }
 
         //constructor
-       public Map(Size mapSize, Size cellSize, Size cellCount, Point goalPosition)
+        public Map(Size mapSize, Size cellSize, Size cellCount, Point goalPosition)
         {
             MapSize = mapSize;
             CellSize = cellSize;

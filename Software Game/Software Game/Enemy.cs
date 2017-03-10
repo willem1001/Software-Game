@@ -28,12 +28,12 @@ namespace Software_Game
 
         private void draw(Graphics g)
         {
-            
+
         }
 
         private void attack(Player player)
         {
-            
+
         }
     }
 }
