@@ -14,8 +14,15 @@ namespace Software_Game
         private Point Position;
         private Type Celltype;
 
+        enum enumCeltype
+        {
+            Normal,
+            Goal,
+            Wall
+        }
+
         //constructor
-        Cell(Point index, Point position, Type celType)
+        public Cell(Point index, Point position, Type celType)
         {
             Index = index;
             Position = position;

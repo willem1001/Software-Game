@@ -29,11 +29,6 @@ namespace Software_Game
             PreformAction
         }
 
-        enum Celtype
-        {
-            Normal,
-            Goal,
-            Wall
-        }
+
     }
 }

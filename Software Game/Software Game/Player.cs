@@ -15,7 +15,7 @@ namespace Software_Game
         private int Hitpoints;
 
         //constructor
-        Player(Point position, Boolean powerUp, int hitpoints)
+         public Player(Point position, Boolean powerUp, int hitpoints)
         {
             Position = position;
             PowerUp = powerUp;

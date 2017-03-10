@@ -14,7 +14,7 @@ namespace Software_Game
         private int HitPoints;
 
         //constructor
-        Enemy(Point position, int hitPoints)
+        public Enemy(Point position, int hitPoints)
         {
             Position = position;
             HitPoints = hitPoints;
