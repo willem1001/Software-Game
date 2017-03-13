@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Software_Game
 {
-    class Player
+    public class Player : Character
     {
-        //fields
-        private Point Position;
-        private Boolean PowerUp;
-        private int Hitpoints;
+
+
+        public Boolean PowerUp { get; private set; }
 
         //constructor
-         public Player(Point position, Boolean powerUp, int hitpoints)
+        public Player(Point position, Boolean powerUp, int hitpoints)
         {
             Position = position;
             PowerUp = powerUp;
@@ -24,19 +24,40 @@ namespace Software_Game
 
 
         //methodes
-        public void update()
-        {
-
-        }
-
-        public void draw(Graphics g)
-        {
-
-        }
-
-        public void interaction(int keyCode)
-        {
-
+        public void interaction(int key)
+        { 
+            //voor verschillende toetsen is er een bepaalde actie
+            switch (key)
+            {
+                default:
+                {
+                    break;
+                }
+                case 1:
+                {
+                    Position = new Point(Position.X, Position.Y - 1);
+                    break;
+                }
+                case 2:
+                {
+                    Position = new Point(Position.X + 1, Position.Y);
+                    break;
+                }
+                case 3:
+                {
+                    Position = new Point(Position.X, Position.Y + 1);
+                    break;
+                }
+                case 4:
+                {
+                    Position = new Point(Position.X - 1, Position.Y);
+                    break;
+                }
+                case 5:
+                {
+                    break;
+                }
+            }
         }
     }
 }

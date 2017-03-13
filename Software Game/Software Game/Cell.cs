@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Software_Game
 {
-    class Cell
+    public class Cell
     {
         //fields
         private Point Index;

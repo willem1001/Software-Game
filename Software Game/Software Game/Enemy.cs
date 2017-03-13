@@ -7,33 +7,20 @@ using System.Drawing;
 
 namespace Software_Game
 {
-    class Enemy
+    public class Enemy : Character
     {
-        //fields
-        private Point Position;
-        private int HitPoints;
-
         //constructor
         public Enemy(Point position, int hitPoints)
         {
             Position = position;
-            HitPoints = hitPoints;
+            Hitpoints = hitPoints;
         }
 
         //methodes
-        private void update()
-        {
-
-        }
-
-        private void draw(Graphics g)
-        {
-
-        }
-
         private void attack(Player player)
         {
-
+            Random random = new Random();            
+            player.update(random.Next(0, 10));
         }
     }
 }
