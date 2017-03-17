@@ -15,10 +15,12 @@ namespace Software_Game
     public partial class Form1 : Form
     {
         Player player = new Player(new Point(0,0), false, 100);
+        Enemy enemy = new Enemy(new Point(30, 30), 5);
 
         public Form1()
         {
             InitializeComponent();
+            button1.Text = player.Hitpoints.ToString();
 
         }
         public enum Keycode
@@ -68,6 +70,15 @@ namespace Software_Game
             }
             button1.Left = player.Position.X;
             button1.Top = player.Position.Y;
+            enemy.move();
+            button2.Top = enemy.Position.Y;
+            button2.Left = enemy.Position.X;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            enemy.attack(player);
+            button1.Text = player.Hitpoints.ToString();
         }
     }
 }

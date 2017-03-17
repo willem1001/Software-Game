@@ -14,12 +14,25 @@ namespace Software_Game
 
         private void update()
         {
-
+           
         }
 
         private void draw(Graphics g)
         {
 
         }
+
+        public static World Instance
+        {
+            get
+            {
+                if (World.instance == null)
+                {
+                    World.instance = new World();
+                }
+                return World.instance;
+            }
+        }
+        private static World instance;
     }
 }
